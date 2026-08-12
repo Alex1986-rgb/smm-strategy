@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0907">
+<title>SMM Strategy · Personal Brand & Transformation · RU + EN</title>
+<meta name="description" content="Стратегия SMM для личного бренда: два аккаунта (RU + EN), пять типов контента, воронка от первого касания до продажи, контент-план на 4 недели и KPI.">
+<link rel="canonical" href="https://alex1986-rgb.github.io/smm-strategy/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SMM Strategy · Personal Brand & Transformation">
+<meta property="og:description" content="Контент, который превращает смыслы в доверие, а доверие — в продажи. Стратегия двух аккаунтов RU + EN, контент-план на 4 недели, воронка и KPI.">
+<meta property="og:image" content="https://alex1986-rgb.github.io/smm-strategy/assets/img/og.jpg">
+<meta property="og:url" content="https://alex1986-rgb.github.io/smm-strategy/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0907'/%3E%3Ctext x='16' y='23' font-size='22' text-anchor='middle' fill='%23d4a24f' font-family='Georgia,serif'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --bg:#0b0907;
+  --bg-soft:#110e0b;
+  --panel:#15110d;
+  --panel-2:#1b1510;
+  --cream:#f5eadb;
+  --muted:#b9aa98;
+  --gold:#d4a24f;
+  --gold-2:#f0ca82;
+  --gold-3:#9f6e2f;
+  --line:rgba(224,175,95,.20);
+  --line-strong:rgba(224,175,95,.46);
+  --shadow:0 30px 90px rgba(0,0,0,.42);
+  --radius:28px;
+  --pad-x:28px;
+  --nav-h:58px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;overflow-x:hidden;background:
+    radial-gradient(circle at 78% 4%,rgba(189,124,45,.12),transparent 28%),
+    radial-gradient(circle at 2% 45%,rgba(87,58,27,.16),transparent 22%),
+    var(--bg);
+  color:var(--cream);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.55;
+  -webkit-tap-highlight-color:rgba(212,162,79,.18);
+}
+img{max-width:100%;height:auto}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.08;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+::selection{background:#d4a24f;color:#16100a}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+.progress{position:fixed;z-index:150;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold-3),var(--gold-2))}
+
+/* ---------- навигация ---------- */
+.nav{
+  position:sticky;top:0;z-index:80;background:rgba(9,7,5,.78);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(224,175,95,.12);
+  padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)
+}
+.nav-inner{max-width:1280px;margin:auto;padding:12px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:8px;font:500 clamp(11px,2.6vw,13px) Georgia,serif;letter-spacing:.12em;color:var(--gold-2)}
+.brand::before{content:"✦";font-size:16px}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-size:13px;text-decoration:none;color:#d7cab9}
+.nav-links a:hover{color:var(--gold-2)}
+.print-btn{border:1px solid var(--line-strong);background:transparent;color:var(--cream);border-radius:999px;padding:9px 14px;cursor:pointer;font:inherit;font-size:13px}
+.burger{
+  display:none;width:44px;height:44px;flex:0 0 44px;align-items:center;justify-content:center;
+  border:1px solid var(--line-strong);border-radius:12px;background:rgba(0,0,0,.2);cursor:pointer;padding:0
+}
+.burger span{display:block;width:18px;height:1.5px;background:var(--gold-2);position:relative;transition:transform .22s,opacity .22s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--gold-2);transition:transform .22s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav[data-open="1"] .burger span{transform:rotate(45deg)}
+.nav[data-open="1"] .burger span::before{transform:translateY(6px) rotate(-90deg)}
+.nav[data-open="1"] .burger span::after{opacity:0}
+
+/* ---------- каркас ---------- */
+.wrap{max-width:1280px;margin:auto;padding:0 var(--pad-x)}
+.hero{min-height:92vh;padding:72px 0 70px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+.kicker{font-size:clamp(10px,2.4vw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;overflow-wrap:break-word}
+h1{font-size:clamp(34px,7vw,104px);line-height:.95;letter-spacing:-.03em;margin:18px 0 22px}
+h1 em{font-style:normal;color:var(--gold-2)}
+.hero-text{font-size:clamp(16px,2vw,24px);color:#ded1c0;max-width:700px}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin:28px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:14px 20px;min-height:48px;text-decoration:none;font-weight:700;font-size:14px}
+.btn.primary{background:linear-gradient(135deg,#efc77c,#b87931);color:#181009;box-shadow:0 12px 40px rgba(193,126,44,.20)}
+.btn.secondary{border:1px solid var(--line-strong);color:#e7dac8;background:rgba(0,0,0,.14)}
+.micro{display:flex;gap:14px;flex-wrap:wrap;color:#958877;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.hero-media{position:relative;min-height:670px}
+.hero-card{
+  position:absolute;inset:0;border-radius:38px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);background:
+  linear-gradient(180deg,rgba(10,8,6,.02),rgba(10,8,6,.22)),
+  url("assets/img/hero.jpg") center 36%/cover no-repeat;
+}
+.hero-card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,9,7,.08),transparent 25%,transparent 70%,rgba(11,9,7,.10))}
+.floating-note{
+  position:absolute;left:-35px;bottom:34px;width:min(390px,72%);z-index:4;
+  padding:24px 26px;border:1px solid var(--line-strong);border-radius:22px;
+  background:rgba(15,12,9,.84);backdrop-filter:blur(14px);box-shadow:var(--shadow)
+}
+.floating-note b{font:400 clamp(19px,4.6vw,25px)/1.2 Georgia,serif;color:var(--gold-2)}
+.floating-note p{margin:9px 0 0;color:#c9baa8;font-size:14px}
+.hero-orbit{position:absolute;width:180px;height:180px;border:1px solid rgba(224,175,95,.16);border-radius:50%;right:-56px;top:-32px}
+.hero-orbit::after{content:"✦";position:absolute;left:47%;top:47%;color:var(--gold)}
+.quick-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-34px;position:relative;z-index:8}
+.stat{padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(18,14,11,.86);backdrop-filter:blur(10px)}
+.stat strong{display:block;font:400 clamp(28px,6vw,34px) Georgia,serif;color:var(--gold-2)}
+.stat span{display:block;margin-top:5px;color:#a99a88;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+section{padding:105px 0;border-top:1px solid rgba(224,175,95,.07)}
+.section-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:58px;align-items:end;margin-bottom:48px}
+.eyebrow{font-size:clamp(10px,2.4vw,12px);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+h2{font-size:clamp(28px,5.5vw,72px);line-height:1.05;letter-spacing:-.022em;margin:10px 0 0}
+h2.h2-sm{font-size:clamp(28px,4.6vw,54px)}
+.lead{font-size:clamp(16px,1.7vw,19px);color:#c8baa9;max-width:760px}
+
+/* ---------- сетки и карточки ---------- */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{
+  position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.026),rgba(255,255,255,.008));box-shadow:0 14px 60px rgba(0,0,0,.18)
+}
+.pad{padding:29px}
+.card h3{font-size:clamp(22px,3.4vw,28px);line-height:1.18;margin:9px 0 10px}
+.card p,.card li{color:#bcae9d}
+.card ul{margin:12px 0 0;padding-left:19px}
+.span4{grid-column:span 4}
+.span5{grid-column:span 5}
+.span6{grid-column:span 6}
+.span7{grid-column:span 7}
+.span8{grid-column:span 8}
+.span12{grid-column:span 12}
+.icon{width:42px;height:42px;border:1px solid var(--line-strong);border-radius:13px;display:grid;place-items:center;color:var(--gold-2);font-size:18px}
+.label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.bigquote{padding:clamp(24px,4vw,38px);font:italic clamp(20px,3.6vw,30px)/1.35 Georgia,serif;color:var(--gold-2);background:linear-gradient(120deg,rgba(178,112,40,.10),transparent 60%)}
+.flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.flow .step{border:1px solid var(--line);border-radius:999px;padding:10px 13px;font-size:13px;color:#ded1c0;background:#100d0a}
+.flow .arr{color:var(--gold)}
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.market{
+  aspect-ratio:9/11;border-radius:30px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow)
+}
+.market.ru{background:linear-gradient(180deg,rgba(11,9,7,.02) 0%,rgba(11,9,7,.85) 80%),url("assets/img/market-ru.jpg") center/cover}
+.market.en{background:linear-gradient(180deg,rgba(11,9,7,.04) 0%,rgba(11,9,7,.90) 82%),url("assets/img/market-en.jpg") center/cover}
+.market-copy{position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,3.4vw,34px)}
+.market h3{font-size:clamp(26px,4.4vw,42px);margin:6px 0 11px}
+.market p{font-size:clamp(14px,1.6vw,16px)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.tag{border:1px solid var(--line-strong);border-radius:999px;padding:7px 10px;font-size:11px;color:#e6c88f;background:rgba(10,8,6,.28)}
+.content-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.content-card{padding:24px 20px;min-height:270px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#18130f,#100d0a)}
+.content-card .n{font:400 27px Georgia,serif;color:var(--gold-2)}
+.content-card h3{font-size:22px;margin:16px 0 8px}
+.content-card p{font-size:14px;color:#b8aa98}
+.funnel-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center}
+.funnel{display:flex;flex-direction:column;gap:8px;align-items:center;padding:25px}
+.funnel div{
+  min-height:58px;display:grid;place-items:center;text-align:center;padding:8px 14px;
+  border:1px solid var(--line-strong);background:linear-gradient(90deg,rgba(184,119,43,.18),rgba(184,119,43,.04));
+  clip-path:polygon(4% 0,96% 0,88% 100%,12% 100%);font-size:clamp(11px,2.6vw,13px);letter-spacing:.05em;text-transform:uppercase
+}
+.f1{width:100%}.f2{width:88%}.f3{width:76%}.f4{width:64%}.f5{width:52%}.f6{width:40%}
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.week{padding:25px;border:1px solid var(--line);border-radius:22px;background:#120f0c;display:flex;flex-direction:column}
+.week .num{font:400 46px Georgia,serif;color:var(--gold-2);opacity:.86}
+.week h3{font-size:clamp(23px,3.2vw,27px);margin:7px 0}
+.week p{color:#b9aa98}
+.week ul{padding-left:18px;color:#b9aa98;font-size:14px;margin:10px 0 18px}
+.week .goal{margin-top:auto;border-top:1px solid var(--line);padding-top:14px;color:#e1c18a;font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+.stories-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:stretch}
+.photo-card{min-height:620px;border-radius:30px;border:1px solid var(--line);background:url("assets/img/stories.jpg") center/cover;box-shadow:var(--shadow)}
+.story-steps{display:grid;gap:9px;margin-top:22px}
+.story-step{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:12px 14px;background:#120f0c}
+.story-step i{width:35px;height:35px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;color:var(--gold-2);font-style:normal;font:400 16px Georgia,serif}
+.story-step b{font-size:14px} .story-step span{display:block;color:#a99a88;font-size:12px;margin-top:2px}
+.hooks{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hook-col{border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,25px)}
+.hook{padding:16px 0;border-bottom:1px solid rgba(224,175,95,.12);font:400 clamp(17px,2.6vw,21px)/1.35 Georgia,serif}
+.hook:last-child{border-bottom:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{padding:22px;border:1px solid var(--line);border-radius:18px;background:#110e0b}
+.kpi b{display:block;color:var(--gold-2);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.kpi span{display:block;margin-top:7px;color:#ad9e8c;font-size:13px}
+.month-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:22px;align-items:stretch}
+.month-photo{min-height:610px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(180deg,transparent 30%,rgba(11,9,7,.68)),url("assets/img/month.jpg") center/cover}
+.month-steps{display:grid;gap:10px;margin-top:19px}
+.month-step{border-left:2px solid var(--gold);padding:11px 0 11px 18px}
+.month-step b{color:var(--gold-2)}.month-step span{display:block;color:#ab9d8b;font-size:13px;margin-top:3px}
+.deliverables{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.deliv{padding:25px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(222,165,83,.05),rgba(255,255,255,.008))}
+.deliv::before{content:"✓";display:inline-grid;place-items:center;width:28px;height:28px;border:1px solid var(--line-strong);border-radius:50%;color:var(--gold-2);margin-bottom:14px}
+.deliv h3{font-size:21px;margin:0 0 8px}
+.deliv p{font-size:13px;color:#ad9f8d;margin:0}
+.cta{padding:clamp(80px,12vw,135px) 0;text-align:center;background:radial-gradient(circle at 50% 30%,rgba(186,118,40,.16),transparent 34%)}
+.cta h2{max-width:970px;margin:10px auto 22px}
+.cta p{max-width:720px;margin:0 auto 30px;font-size:clamp(16px,1.9vw,18px);color:#c2b4a3}
+.footer{padding:28px var(--pad-x) calc(42px + env(safe-area-inset-bottom));text-align:center;color:#766b5f;font-size:11px;letter-spacing:.14em}
+
+/* ---------- планшет ---------- */
+@media(max-width:1050px){
+  .hero-grid,.section-head,.funnel-wrap,.stories-grid,.month-grid{grid-template-columns:1fr}
+  .section-head{gap:22px;align-items:start}
+  .hero{min-height:0}
+  .hero-media{min-height:0;aspect-ratio:1/1;margin-top:8px}
+  .quick-stats{grid-template-columns:1fr 1fr;margin-top:20px}
+  .content-grid{grid-template-columns:1fr 1fr}
+  .content-card:last-child{grid-column:1/-1}
+  .week-grid{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+  .span4,.span5,.span6,.span7,.span8{grid-column:span 12}
+  .floating-note{left:14px;bottom:22px;width:min(390px,78%)}
+  .photo-card{min-height:0;aspect-ratio:4/5}
+  .month-photo{min-height:0;aspect-ratio:4/5;order:-1}
+  .deliverables{grid-template-columns:1fr 1fr}
+  section{padding:84px 0}
+}
+
+/* ---------- мобильные ---------- */
+@media(max-width:760px){
+  :root{--pad-x:18px}
+  .nav-inner{padding:10px var(--pad-x)}
+  .burger{display:inline-flex}
+  .nav-links{
+    position:absolute;left:0;right:0;top:100%;display:grid;gap:0;
+    background:#0b0907;
+    border-bottom:1px solid var(--line);
+    padding:6px var(--pad-x) 14px;
+    max-height:0;overflow:hidden;visibility:hidden;transition:max-height .26s ease,visibility .26s
+  }
+  .nav[data-open="1"] .nav-links{max-height:70vh;visibility:visible}
+  .nav-links a{padding:14px 2px;font-size:15px;border-bottom:1px solid rgba(224,175,95,.10)}
+  .print-btn{margin-top:12px;width:100%;padding:13px;min-height:48px}
+
+  .hero{padding:38px 0 46px}
+  .hero-media{aspect-ratio:4/5;margin-top:14px}
+  .hero-card{border-radius:26px;background:
+    linear-gradient(180deg,rgba(10,8,6,.02),rgba(10,8,6,.22)),
+    url("assets/img/hero-sm.jpg") center 34%/cover no-repeat}
+  .hero-orbit{width:118px;height:118px;right:-30px;top:-22px}
+  .floating-note{
+    position:static;width:auto;margin-top:14px;padding:20px;border-radius:18px;
+    backdrop-filter:none;background:rgba(15,12,9,.92);box-shadow:0 14px 40px rgba(0,0,0,.3)
+  }
+  .hero-actions{gap:9px;margin:22px 0}
+  .hero-actions .btn{flex:1 1 100%}
+  .micro{gap:10px;font-size:10px}
+
+  .quick-stats{grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+  .stat{padding:16px;border-radius:16px}
+  .stat span{font-size:11px}
+
+  section{padding:60px 0}
+  .section-head{margin-bottom:30px;gap:16px}
+  .bento{gap:12px}
+  .pad{padding:22px}
+  .dual,.hooks,.deliverables{grid-template-columns:1fr}
+  .content-grid,.week-grid,.kpis{grid-template-columns:1fr}
+  .content-card{min-height:0;padding:22px 20px}
+  .market{aspect-ratio:3/4;border-radius:24px}
+  .market.ru{background:linear-gradient(180deg,rgba(11,9,7,.02) 0%,rgba(11,9,7,.30) 34%,rgba(11,9,7,.92) 62%),url("assets/img/market-ru-sm.jpg") center 20%/cover}
+  .market.en{background:linear-gradient(180deg,rgba(11,9,7,.04) 0%,rgba(11,9,7,.32) 34%,rgba(11,9,7,.94) 62%),url("assets/img/market-en-sm.jpg") center 20%/cover}
+  .market-copy{background:linear-gradient(180deg,transparent,rgba(11,9,7,.55) 22%,rgba(11,9,7,.88) 48%);padding-top:38px}
+  .photo-card{aspect-ratio:3/4;border-radius:24px;background-image:url("assets/img/stories-sm.jpg")}
+  .month-photo{aspect-ratio:3/4;border-radius:24px;background-image:linear-gradient(180deg,transparent 30%,rgba(11,9,7,.68)),url("assets/img/month-sm.jpg")}
+  .funnel{padding:6px 0}
+  .f1{width:100%}.f2{width:96%}.f3{width:90%}.f4{width:84%}.f5{width:78%}.f6{width:72%}
+  .week{padding:22px}
+  .week .num{font-size:38px}
+  .story-step{grid-template-columns:36px 1fr;gap:11px;padding:11px 12px}
+  .hook{padding:14px 0}
+  .cta .btn{width:100%}
+}
+
+/* ---------- узкие телефоны ---------- */
+@media(max-width:430px){
+  .quick-stats{grid-template-columns:1fr}
+  .stat{display:flex;align-items:baseline;gap:12px}
+  .stat strong{font-size:26px}
+  .stat span{margin-top:0}
+  .flow{gap:6px}
+  .flow .step{font-size:12px;padding:8px 11px}
+  .flow .arr{display:none}
+  .funnel div{clip-path:polygon(2% 0,98% 0,94% 100%,6% 100%)}
+  .f2,.f3,.f4,.f5,.f6{width:100%}
+  section{padding:52px 0}
+}
+
+/* ---------- доступность и печать ---------- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+@media print{
+  .nav,.progress,.hero-actions{display:none!important}
+  body{background:#0b0907!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body::before{display:none}
+  section{break-inside:avoid;padding:50px 0}
+  .market,.photo-card,.month-photo,.hero-media{aspect-ratio:auto;min-height:420px}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="brand">SMM STRATEGY · RU + EN</div>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#strategy">Стратегия</a>
+      <a href="#markets">RU / EN</a>
+      <a href="#plan">4 недели</a>
+      <a href="#kpi">KPI</a>
+      <button class="print-btn" onclick="window.print()">Печать / PDF</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="kicker">MARKETING STRATEGY · PERSONAL BRAND × TRANSFORMATION</div>
+        <h1>Контент, который превращает <em>смыслы в доверие</em>, а доверие — в продажи.</h1>
+        <div class="hero-text">Полная система роста для двух аккаунтов — русского и англоязычного. Не просто охваты, а путь человека от первого касания до продукта.</div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#strategy">Смотреть стратегию →</a>
+          <a class="btn secondary" href="#plan">План на 4 недели</a>
+        </div>
+        <div class="micro"><span>личный бренд</span><span>психология аудитории</span><span>прогрев</span><span>продажи</span></div>
+      </div>
+      <div class="hero-media reveal">
+        <div class="hero-card"></div>
+        <div class="hero-orbit"></div>
+        <div class="floating-note">
+          <b>«Человек приходит за мыслью, остаётся из-за личности и покупает, когда доверяет методу.»</b>
+          <p>Главный принцип всей стратегии.</p>
+        </div>
+      </div>
+    </div>
+    <div class="quick-stats reveal">
+      <div class="stat"><strong>2</strong><span>отдельных аккаунта</span></div>
+      <div class="stat"><strong>4</strong><span>недели драматургии</span></div>
+      <div class="stat"><strong>5</strong><span>контент-механик</span></div>
+      <div class="stat"><strong>1</strong><span>единая бизнес-воронка</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="strategy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">01 · СТРАТЕГИЯ</div><h2>Не «вести соцсети». Строить медиа вокруг личности автора.</h2></div>
+      <div class="lead">Система должна постепенно менять отношение аудитории: незнакомый человек → узнаёт себя → доверяет автору → хочет изменения → понимает ценность метода → покупает.</div>
+    </div>
+
+    <div class="bento">
+      <div class="card span4 pad reveal"><div class="icon">◎</div><h3>Внимание</h3><p>Сильный hook, контрастная мысль, эмоциональный конфликт. Цель — остановить холодного зрителя.</p></div>
+      <div class="card span4 pad reveal"><div class="icon">◌</div><h3>Узнавание</h3><p>Контент формулирует то, что человек чувствует, но пока не умеет назвать словами.</p></div>
+      <div class="card span4 pad reveal"><div class="icon">✦</div><h3>Доверие</h3><p>Личность, жизненный опыт и ясная методология превращают автора в проводника.</p></div>
+      <div class="card span7 bigquote reveal">«Сначала продаётся не практика. Сначала продаётся ощущение: “этот человек понимает, что происходит со мной”.»</div>
+      <div class="card span5 pad reveal">
+        <div class="label">Путь к продаже</div>
+        <div class="flow">
+          <span class="step">Hook</span><span class="arr">→</span>
+          <span class="step">Profile</span><span class="arr">→</span>
+          <span class="step">Stories</span><span class="arr">→</span>
+          <span class="step">DM / Link</span><span class="arr">→</span>
+          <span class="step">Sale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">02 · ПСИХОЛОГИЯ</div><h2>Контент начинается с внутреннего диалога аудитории.</h2></div>
+      <div class="lead">Не «темы про саморазвитие», а точные напряжения: где человек чувствует разрыв между внешне нормальной жизнью и внутренним ощущением себя.</div>
+    </div>
+
+    <div class="bento">
+      <div class="card span7 pad reveal">
+        <div class="label">ЧТО ЧЕЛОВЕК ДУМАЕТ</div>
+        <h3>«У меня вроде всё нормально. Почему тогда я чувствую, что живу не свою жизнь?»</h3>
+        <ul>
+          <li>«Я устала постоянно быть сильной».</li>
+          <li>«Я много понимаю головой, но не меняюсь».</li>
+          <li>«Мне хочется глубины, а не ещё одной мотивационной цитаты».</li>
+          <li>«Я хочу свободы, но боюсь разрушить привычное».</li>
+        </ul>
+      </div>
+      <div class="card span5 pad reveal">
+        <div class="label">ЧТО ДЕЛАЕТ КОНТЕНТ</div>
+        <h3>Не давит. Переводит в новое состояние.</h3>
+        <ul>
+          <li>узнать себя;</li><li>увидеть причину иначе;</li><li>почувствовать возможность перемен;</li><li>довериться способу автора;</li><li>сделать следующий шаг.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="markets">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">03 · RU + EN</div><h2>Не перевод. Два самостоятельных контент-мира.</h2></div>
+      <div class="lead">Одна философия бренда, но разные культурные коды, язык, визуальные маркеры и эмоциональные триггеры.</div>
+    </div>
+    <div class="dual">
+      <article class="market ru reveal">
+        <div class="market-copy">
+          <div class="eyebrow">RUSSIAN ACCOUNT</div>
+          <h3>Свобода. Личность. Жизнь.</h3>
+          <p>Живой и эмоциональный тон: самоценность, отношения с собой, женственность, внутренние конфликты, выбор, lifestyle и личные истории.</p>
+          <div class="tags"><span class="tag">личные истории</span><span class="tag">самоценность</span><span class="tag">свобода</span><span class="tag">lifestyle</span><span class="tag">трансформация</span></div>
+        </div>
+      </article>
+      <article class="market en reveal">
+        <div class="market-copy">
+          <div class="eyebrow">ENGLISH ACCOUNT</div>
+          <h3>Identity. Ritual. Transformation.</h3>
+          <p>Deeper focus on archetypes, shadow work, symbolism, rituals, sacred aesthetics, personal philosophy and the transformation of identity.</p>
+          <div class="tags"><span class="tag">ritual</span><span class="tag">archetypes</span><span class="tag">shadow work</span><span class="tag">identity</span><span class="tag">occult aesthetics</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">04 · CONTENT ENGINE</div><h2>Пять типов контента. Пять разных задач.</h2></div>
+      <div class="lead">Каждая единица контента должна знать, зачем она существует: привести нового человека, создать узнавание, усилить экспертность, раскрыть автора или конвертировать.</div>
+    </div>
+
+    <div class="content-grid">
+      <div class="content-card reveal"><div class="n">01</div><h3>Viral</h3><p>7–20 секунд. Provocative hook, тренд, неожиданный инсайт. Цель — новая аудитория.</p></div>
+      <div class="content-card reveal"><div class="n">02</div><h3>Relatable</h3><p>«Это про меня». Боль, узнаваемая ситуация, эмоция, личный конфликт.</p></div>
+      <div class="content-card reveal"><div class="n">03</div><h3>Authority</h3><p>Сложные механизмы простым языком. Автор становится человеком, который умеет объяснять.</p></div>
+      <div class="content-card reveal"><div class="n">04</div><h3>Personal Brand</h3><p>Жизнь, решения, ритуалы, творчество, путешествия, ошибки и личная философия.</p></div>
+      <div class="content-card reveal"><div class="n">05</div><h3>Conversion</h3><p>Проблема → новое объяснение → история → метод → естественное предложение.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="funnel-wrap">
+      <div class="reveal">
+        <div class="eyebrow">05 · ВОРОНКА</div>
+        <h2>Контент ведёт глубже, а не просто набирает просмотры.</h2>
+        <p class="lead">Сильный SMM становится системой поведения аудитории. Мы видим, где человек остановился и что должно подтолкнуть его к следующему шагу.</p>
+      </div>
+      <div class="card funnel reveal">
+        <div class="f1">Внимание · Hook / Viral</div>
+        <div class="f2">Узнавание · Relatable</div>
+        <div class="f3">Доверие · Authority + Personal</div>
+        <div class="f4">Желание изменения</div>
+        <div class="f5">Метод / Практика</div>
+        <div class="f6">Покупка</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">06 · 4 НЕДЕЛИ</div><h2>Контент-план как драматургия месяца.</h2></div>
+      <div class="lead">Не случайные публикации. Каждая неделя создаёт следующий уровень готовности аудитории.</div>
+    </div>
+    <div class="week-grid">
+      <div class="week reveal"><div class="num">01</div><h3>Узнать себя</h3><p>Почему я живу не так, как хочу?</p><ul><li>диагностические Reels</li><li>личная история</li><li>опросы</li><li>relatable-сюжеты</li></ul><div class="goal">Цель: узнавание + вовлечение</div></div>
+      <div class="week reveal"><div class="num">02</div><h3>Почему я не меняюсь</h3><p>Понимания недостаточно для трансформации.</p><ul><li>механизмы поведения</li><li>мини-практики</li><li>экспертные Reels</li><li>вопросы аудитории</li></ul><div class="goal">Цель: экспертность + интерес</div></div>
+      <div class="week reveal"><div class="num">03</div><h3>Как выглядит изменение</h3><p>Показываем результат через состояние.</p><ul><li>lifestyle как доказательство</li><li>решения автора</li><li>истории «до / после»</li><li>ритуалы и привычки</li></ul><div class="goal">Цель: желание изменений</div></div>
+      <div class="week reveal"><div class="num">04</div><h3>Сделать шаг</h3><p>Показываем метод и снимаем возражения.</p><ul><li>FAQ</li><li>кейсы при наличии</li><li>кому подходит</li><li>мягкие и прямые CTA</li></ul><div class="goal">Цель: конверсия + продажи</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="stories-grid">
+      <div class="photo-card reveal"></div>
+      <div class="reveal">
+        <div class="eyebrow">07 · STORIES</div>
+        <h2>Stories — это мини-воронка, а не набор кадров.</h2>
+        <div class="story-steps">
+          <div class="story-step"><i>1</i><div><b>Lifestyle moment</b><span>Красивый живой кадр, который привлекает внимание.</span></div></div>
+          <div class="story-step"><i>2</i><div><b>Проблема</b><span>«Сегодня поймала себя на мысли…»</span></div></div>
+          <div class="story-step"><i>3</i><div><b>Новый взгляд</b><span>Смена привычного объяснения.</span></div></div>
+          <div class="story-step"><i>4</i><div><b>Личный опыт</b><span>Автор открывается и создаёт доверие.</span></div></div>
+          <div class="story-step"><i>5</i><div><b>Вовлечение</b><span>Вопрос / опрос / реакция аудитории.</span></div></div>
+          <div class="story-step"><i>6</i><div><b>Метод</b><span>Маленькая практика или принцип.</span></div></div>
+          <div class="story-step"><i>7</i><div><b>CTA</b><span>Логичный переход к продукту или диалогу.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">08 · HOOKS</div><h2>Первая фраза должна попадать раньше, чем начнётся объяснение.</h2></div>
+      <div class="lead">Короткие формулировки, которые открывают внутренний конфликт — отдельно под RU и EN-аудиторию.</div>
+    </div>
+    <div class="hooks">
+      <div class="hook-col reveal">
+        <div class="eyebrow">RU</div>
+        <div class="hook">«Ты не обязана становиться лучшей версией себя.»</div>
+        <div class="hook">«Самая опасная клетка — жизнь, которая выглядит идеальной со стороны.»</div>
+        <div class="hook">«Возможно, тебе не нужна мотивация. Тебе нужна честность.»</div>
+        <div class="hook">«Ты правда этого хочешь — или просто привыкла хотеть именно этого?»</div>
+      </div>
+      <div class="hook-col reveal">
+        <div class="eyebrow">EN</div>
+        <div class="hook">“You may not need healing. You may need permission.”</div>
+        <div class="hook">“Some versions of you deserve to end.”</div>
+        <div class="hook">“Your comfort zone isn't always comfortable. Sometimes it's simply familiar.”</div>
+        <div class="hook">“The life you want may require an identity your current self cannot keep.”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kpi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">09 · KPI</div><h2>SMM работает, когда можно проследить путь до действия.</h2></div>
+      <div class="lead">Лайки — не бизнес-результат. Аналитика показывает, где теряется внимание, доверие или намерение купить.</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi reveal"><b>3-sec retention</b><span>Сработал ли первый кадр и hook.</span></div>
+      <div class="kpi reveal"><b>Watch time</b><span>Удерживает ли сценарий.</span></div>
+      <div class="kpi reveal"><b>Shares / Saves</b><span>Есть ли ценность и эмоциональный отклик.</span></div>
+      <div class="kpi reveal"><b>Profile visits</b><span>Захотел ли зритель узнать автора.</span></div>
+      <div class="kpi reveal"><b>Follow conversion</b><span>Превращается ли просмотр в аудиторию.</span></div>
+      <div class="kpi reveal"><b>Story completion</b><span>Удерживает ли прогрев.</span></div>
+      <div class="kpi reveal"><b>DM / Clicks / Leads</b><span>Появляется ли намерение действовать.</span></div>
+      <div class="kpi reveal"><b>Sales</b><span>Конечная бизнес-метрика.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="month-grid">
+      <div class="card pad reveal">
+        <div class="eyebrow">10 · ПЕРВЫЕ 30 ДНЕЙ</div>
+        <h2 class="h2-sm">Тест → данные → масштабирование.</h2>
+        <div class="month-steps">
+          <div class="month-step"><b>Неделя 1</b><span>Аудит продукта, контента, аудитории, позиционирования и текущей воронки.</span></div>
+          <div class="month-step"><b>Неделя 2</b><span>Тест 5–7 типов hooks, сценарных механик, тем и форматов Reels / Stories.</span></div>
+          <div class="month-step"><b>Неделя 3</b><span>Масштабирование форматов с лучшим удержанием, сохранениями и переходами в профиль.</span></div>
+          <div class="month-step"><b>Неделя 4</b><span>Усиление контента, который приводит в Stories, DM, ссылки и продажи.</span></div>
+        </div>
+      </div>
+      <div class="month-photo reveal"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">11 · РЕЗУЛЬТАТ РАБОТЫ</div><h2>Что получает заказчик за месяц подготовки.</h2></div>
+      <div class="lead">Конкретный рабочий пакет, с которым можно снимать, публиковать, тестировать и улучшать контент — без ожидания новых задач от заказчика.</div>
+    </div>
+    <div class="deliverables">
+      <div class="deliv reveal"><h3>Стратегия 2 аккаунтов</h3><p>Позиционирование, аудитория, смыслы, путь к продукту и различия RU / EN.</p></div>
+      <div class="deliv reveal"><h3>Контент-план на 4 недели</h3><p>Не шаблонная сетка, а последовательность удержания, доверия и продаж.</p></div>
+      <div class="deliv reveal"><h3>Сценарии Reels</h3><p>Hooks, короткие развлекательные и трансформационные сценарии.</p></div>
+      <div class="deliv reveal"><h3>Stories-механики</h3><p>Мини-воронки, Q&A, storytelling, прогревы и мягкие CTA.</p></div>
+      <div class="deliv reveal"><h3>ТЗ на съёмку</h3><p>Кадры, композиции, mood, визуальные референсы и логика монтажа.</p></div>
+      <div class="deliv reveal"><h3>Аналитика и улучшения</h3><p>Еженедельная оценка удержания, переходов, лидов и продаж.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap reveal">
+    <div class="eyebrow">12 · CORE IDEA</div>
+    <h2>Создать не просто контент — создать путь к внутренним изменениям и покупке.</h2>
+    <p>Человек приходит за сильной мыслью, остаётся из-за личности, доверяет благодаря системе и выбирает продукт, когда видит в нём естественный следующий шаг.</p>
+    <a class="btn primary" href="#strategy">Вернуться к стратегии ↑</a>
+  </div>
+</section>
+
+<footer class="footer">PERSONAL BRAND × TRANSFORMATION · SMM / CONTENT STRATEGY · RU + EN</footer>
+
+<script>
+const progress=document.getElementById('progress');
+function updateProgress(){
+  const d=document.documentElement;
+  const max=d.scrollHeight-d.clientHeight;
+  progress.style.width=(max?d.scrollTop/max*100:0)+'%';
+}
+addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+
+/* мобильное меню */
+const nav=document.getElementById('nav'), burger=document.getElementById('burger');
+function setMenu(open){
+  nav.dataset.open=open?'1':'0';
+  burger.setAttribute('aria-expanded',open?'true':'false');
+}
+burger.addEventListener('click',()=>setMenu(nav.dataset.open!=='1'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+matchMedia('(min-width:761px)').addEventListener('change',e=>{if(e.matches)setMenu(false)});
+</script>
+</body>
+</html>
